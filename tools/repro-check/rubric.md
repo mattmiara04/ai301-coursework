@@ -1,0 +1,16 @@
+# Rubric: is this reproduction package ready to post?
+
+## Checks
+
+| Check | Evidence | Pass condition | Weight |
+|---|---|---|---|
+| environment_recorded | The repro report's environment record and repo-facts block. | Pass when the recorded environment identifies enough concrete repository, revision, runtime, dependency, and setup context for another person to understand what system produced the reported result. | required |
+| steps_reproducible | The reproduction commands and steps in the repro report, read together with any setup details in the environment record. | Pass when another contributor could follow the stated setup and actions in order without having to guess a material command, input, configuration, or prerequisite needed to reach the reported observation. | required |
+| behavior_matches_issue | The observed output, error, logs, or other artifacts read against the behavior described by the issue, the reproduction conditions actually tested, and any environment differences explicitly recorded in the repro report. | Pass when the evidence directly tests the issue's reported behavior or a clearly identified attempt to reproduce it and accurately shows what happened. An evidenced cannot-reproduce attempt may pass even when its environment differs from the reporter's, provided the relevant differences are explicitly recorded and the report does not claim those results disprove the issue. Fail when the evidence tests only an adjacent or materially different behavior while presenting it as evidence about the target issue. | required |
+| outcome_honest | The claim comment, repro report's stated result, and the artifacts supporting that result. | Pass when the stated outcome is no stronger than the evidence supports. An evidenced cannot-reproduce result passes; an unsupported claim of successful reproduction, or a claim contradicted by the artifacts, fails. | required |
+| ai_disclosure | The repo-facts block's AI-use policy, read against the candidate claim comment and repro comment. | Pass when the repository has no applicable AI-disclosure requirement, or when every candidate comment covered by such a requirement contains the disclosure the repository asks for, including the tool and extent of assistance when those details are required. If the repository explicitly requires disclosure for AI-assisted issues or comments and the candidate comments omit it, fail. | required |
+| repo_conventions | The proposed claim and repro comments read against the repository facts and the applicable communication or contribution conventions identified in references/evidence-guide.md. | Pass when the comments follow applicable repository-specific requirements and do not make promises, claims, or disclosures that conflict with those conventions. | required |
+
+## Verdict rule
+
+Accept only when every required check passes. A required check graded unclear counts as a failure and the package is rejected. Preferred checks, if any are added later, may provide guidance but never change the accept or reject verdict.
